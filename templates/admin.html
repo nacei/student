@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <title>管理页面</title>
+</head>
+<body>
+<h1>管理页面</h1>
+<h2>Students</h2>
+<table class="table" style="width: 80%;margin: 100px auto">
+    <thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">姓名</th>
+        <th scope="col">语文</th>
+        <th scope="col">数学</th>
+        <th scope="col">英语</th>
+        <th scope="col">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#  需要将python数据显示过来，模版语法，flask用jinja2
+    numjucks（js），moka(jdango)
+
+#}
+    {#{{ students }}#}
+    {% for stu in students %}
+        <tr>
+            <th scope="row"></th>
+            <td>{{ stu['name'] }}</td>
+            <td>{{ stu['chinese'] }}</td>
+            <td>{{ stu['math'] }}</td>
+            <td>{{ stu.english }}</td>
+            <td><a href="/delete?name={{ stu.name }}">删除</a> <a href="/change?name={{ stu.name }}">修改</a></td>
+            {#用键值名或.键值名均可。数据多应该分页显示#}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="container" style="width: 80%; text-align: right">
+    <div class="row">
+        <div class="col-sm">
+            <a href="/add">增加学员</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

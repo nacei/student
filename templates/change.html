@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h2 style="text-align: center">修改学生</h2>
+<form style="width: 400px; margin: 100px auto" method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">用户名</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+               name="username"
+                value={{ student.name }}>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">语文</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="chinese" value={{ student.chinese }}>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">数学</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="math" value={{ student.math }}>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">英语</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="english" value={{ student.english }}>
+    </div>
+
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+</body>
+</html>
